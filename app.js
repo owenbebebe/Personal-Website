@@ -91,6 +91,9 @@ function updateHeaderPosition() {
     if (currentScrollPos <= 300) {
         scrollHero.style.transform = `translateY(${currentScrollPos}px)`;
         scrollNav.style.transform = `translateY(${currentScrollPos}px)`;
+        let scrollOpc = 1-(currentScrollPos*0.00333);
+        scrollNav.style.opacity = scrollOpc;
+        scrollHero.style.opacity = scrollOpc;
         canvasH.style.transform = `translateY(${currentScrollPos*0.889}px)`;
         canvas.style.transform = `translateY(${currentScrollPos*0.667}px)`;        
         
