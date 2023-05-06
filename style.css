@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+:root{
+    --primary-color: #FEFBFA;
+    --secondary-color: #454442;
+    --border-color: #F5F1F0;
+    --third-color: #1D7874;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Playfair Display', serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.frame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95vw;
+    height: 95vh;
+    z-index: 1000;
+}
+
+.frame-line {
+    border: 2px solid var(--secondary-color);
+    animation: run 2s 1 linear;
+}
+
+.frame-border {
+    border: 100vw solid var(--border-color);
+    animation: run1 2s 1 linear;
+}
+
+@keyframes run {
+    0%{
+       border-left-color: var(--primary-color); 
+    }
+    25% {
+        border-left-color: var(--secondary-color);
+        border-bottom-color: var(--primary-color);
+        border-right-color: var(--primary-color);
+        border-top-color: var(--primary-color);
+    }
+    50% {
+        border-left-color: var(--secondary-color);
+        border-bottom-color: var(--secondary-color);
+        border-right-color: var(--primary-color);
+        border-top-color: var(--primary-color);
+    }
+    75% {
+        border-left-color: var(--secondary-color);
+        border-bottom-color: var(--secondary-color);
+        border-right-color: var(--secondary-color);
+        border-top-color: var(--primary-color);
+    }
+  }
+
+  @keyframes run1 {
+    0%{
+       border-left-color: var(--primary-color); 
+    }
+    25% {
+        border-left-color: var(--border-color);
+        border-bottom-color: var(--primary-color);
+        border-right-color: var(--primary-color);
+        border-top-color: var(--primary-color);
+    }
+    50% {
+        border-left-color: var(--border-color);
+        border-bottom-color: var(--border-color);
+        border-right-color: var(--primary-color);
+        border-top-color: var(--primary-color);
+    }
+    75% {
+        border-left-color: var(--border-color);
+        border-bottom-color: var(--border-color);
+        border-right-color: var(--border-color);
+        border-top-color: var(--primary-color);
+    }
+  }
+
+  .header {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .header-container {
+    width: 100;
+    height: 200vh;
+  }
+
+  .hero {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
+  .hero-p {
+    font-size:large;
+    width: 33vw;
+}
+
+  .hero-s {
+    font-weight: 600;
+    color: var(--third-color);
+  }
+  
+
+
+  .nav {
+    font-size: x-large;
+    font-weight: bold;
+    position: absolute;
+    left: 70%;
+    top: 57.5%;
+  }
+  
+  @media (max-width: 767px) {
+    .nav {
+      left: 65%;
+    }
+  }
+  
+  /* For tablets */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .nav {
+        left: 75%;
+        top: 55%;
+    }
+  }
+  
+  /* For desktops and larger devices */
+  @media (min-width: 1024px) {
+    .nav {
+        left: 80%;
+        top: 55%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .nav {
+        left: 85%;
+        top: 50%;
+        font-size: xx-large;
+    }
+  }
+
+  .nav-li {
+    margin: 1rem 0;
+    transition: color 1s ease-in-out;
+  }
+
+  .nav-li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  .nav-li:hover a {
+    color: var(--third-color);
+  }
+
+
+  .canvas {
+    position: absolute;    
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .canvas-low {
+    top: 45%;
+  }
+
+  .canvas-high {
+    top:45%;
+  }
+  .canvas-moon {
+    top:50;
+    left:0;
+  }
+
+  .slides {
+    display: flex;
+  }
+
+  .slide:nth-child(2) {
+    transition-delay: 200ms;
+  }
+
+  .slide:nth-child(3) {
+    transition-delay: 400ms;
+  }
+
+
+
+  .photo {
+    margin: 1rem;
+    box-shadow: 0 0 3px 0.5px var(--secondary-color);
+    background-color: white;
+    height: 17.5rem;
+    width: 10rem;
+    transition: opacity 1s linear;
+  }
+
+  .photo:hover {
+    opacity: 0.5;
+  }
+
+  
