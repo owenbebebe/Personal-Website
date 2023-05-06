@@ -74,7 +74,7 @@ function draw() {
         ctxM.beginPath();
         ctxM.arc((canvasM.width*(1+scrollTop*-0.00066)/1.15), (canvasM.height*moonY)/10, 2*  radius *  i * (1-moonR), 0, Math.PI * 2);
         ctxM.lineWidth = radius * 0.01;
-        ctxM.globalAlpha = (1+scrollTop*-0.001667)* (1- (0.04997 * i));
+        ctxM.globalAlpha = (1+scrollTop*-0.003334)* (1- (0.04997 * i));
         ctxM.stroke();
     }
     
@@ -90,14 +90,12 @@ function updateHeaderPosition() {
     let stickyScroll = currentScrollPos /10;
     if (currentScrollPos <= 300) {
         if (scrollEnter == true) {
-            canvas.style.transform = `translateY(${0}px)`;
-            canvasH.style.transform = `translateY(${0}px)`;   
             scrollHero.style.transform = `translateY(${0}px)`; 
-            scrollNav.style.transform = `translateY(${0}px)`;        
+            scrollNav.style.transform = `translateY(${0}px)`;
         }
         scrollEnter = false;
-        canvas.style.position = "fixed";
-        canvasH.style.position = "fixed";
+        canvasH.style.transform = `translateY(${currentScrollPos*0.889}px)`;
+        canvas.style.transform = `translateY(${currentScrollPos*0.667}px)`;        
         scrollNav.style.position = "fixed";
         scrollHero.style.position = "fixed";
         
@@ -109,10 +107,7 @@ function updateHeaderPosition() {
             scrollNav.style.position = "absolute";
             scrollHero.style.transform = `translateY(${currentScrollPos}px)`;
             scrollHero.style.position = "absolute";
-            canvas.style.transform = `translateY(${currentScrollPos}px)`;
             canvas.style.position = "absolute";
-            canvasH.style.transform = `translateY(${currentScrollPos}px)`;
-            canvasH.style.position = "absolute";
         }
     }
   }
