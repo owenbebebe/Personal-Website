@@ -89,26 +89,16 @@ function updateHeaderPosition() {
     console.log(currentScrollPos);
     let stickyScroll = currentScrollPos /10;
     if (currentScrollPos <= 300) {
-        if (scrollEnter == true) {
-            scrollHero.style.transform = `translateY(${0}px)`; 
-            scrollNav.style.transform = `translateY(${0}px)`;
-        }
-        scrollEnter = false;
+        scrollHero.style.transform = `translateY(${currentScrollPos}px)`;
+        scrollNav.style.transform = `translateY(${currentScrollPos}px)`;
         canvasH.style.transform = `translateY(${currentScrollPos*0.889}px)`;
         canvas.style.transform = `translateY(${currentScrollPos*0.667}px)`;        
-        scrollNav.style.position = "fixed";
-        scrollHero.style.position = "fixed";
         
     }
     if (currentScrollPos >= 300) {
-        if (scrollEnter == false){
-            scrollEnter = true;
-            scrollNav.style.transform = `translateY(${currentScrollPos}px)`;
-            scrollNav.style.position = "absolute";
-            scrollHero.style.transform = `translateY(${currentScrollPos}px)`;
-            scrollHero.style.position = "absolute";
-            canvas.style.position = "absolute";
-        }
+        scrollNav.style.position = "absolute";
+        scrollHero.style.position = "absolute";
+        canvas.style.position = "absolute";
     }
   }
 
