@@ -74,7 +74,7 @@ function draw() {
         ctxM.beginPath();
         ctxM.arc((canvasM.width*(1+scrollTop*-0.00066)/1.15), (canvasM.height*moonY)/10, 2*  radius *  i * (1-moonR), 0, Math.PI * 2);
         ctxM.lineWidth = radius * 0.01;
-        ctxM.globalAlpha = (1+scrollTop*-0.003334)* (1- (0.04997 * i));
+        ctxM.globalAlpha = (1+scrollTop*-0.0041117)* (1- (0.04997 * i));
         ctxM.stroke();
     }
     
@@ -99,6 +99,8 @@ function updateHeaderPosition() {
         
     }
     if (currentScrollPos >= 300) {
+        scrollNav.style.opacity = 0;
+        scrollHero.style.opacity = 0;
         scrollNav.style.position = "absolute";
         scrollHero.style.position = "absolute";
         canvas.style.position = "absolute";
