@@ -16,8 +16,8 @@ body {
 }
 
 h1 {
-  font-size: xx-large;
-  font-weight: 700;
+  font-size: xxx-large;
+  font-weight: 550;
 }
 
 
@@ -127,6 +127,7 @@ section {
   }
 
   .hero {
+    z-index: 1002;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -145,6 +146,7 @@ section {
 
 
   .nav {
+    z-index: 997;
     font-size: x-large;
     font-weight: bold;
     position: absolute;
@@ -205,13 +207,16 @@ section {
   }
 
   .canvas-low {
+    z-index: 998;
     top: 45%;
   }
 
   .canvas-high {
+    z-index: 997;
     top:45%;
   }
   .canvas-moon {
+    z-index: 0;
     max-width: 100%;
     top:50;
     left:0;
@@ -234,7 +239,6 @@ section {
     display: flex;
     cursor: grab;
     overflow: auto;
-    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -269,8 +273,14 @@ section {
     color: #F5F1F0;
   }
 
+  .photo-des {
+    width: 10rem;
+    height: 8rem;
+  }
+
   .photo-icons {
-    margin-top: 4rem;
+    margin-top: none;
+    margin-bottom: 1rem;
   }
 
   .photo-icons > img{
@@ -278,7 +288,6 @@ section {
     height: 2rem;
   }
   .photo-links {
-    transform: translateY(1.5rem);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -301,16 +310,6 @@ section {
   }
 
 
-  @media screen and (max-width: 768px) {
-    .photo-container {
-      display: block;
-    }
-    .photo {
-      display: block;
-      margin: 3rem auto;
-    }
-  }
-  
   
 
   
