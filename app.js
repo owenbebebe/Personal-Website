@@ -38,10 +38,12 @@ function animate() {
             let y =  canvasH.height / 2 + Math.cos(i * 0.0057+ time) * (j*0.03) * 50 ;
             ctxH.lineTo(i, 0.8*y+(j*-4));
         }
+        if(j === 80) {
+            ctxH.fillStyle = "#FEFBFA";
+            ctxH.fill();
+        }
         ctxH.strokeStyle = "#c5947e";
         ctxH.globalAlpha = 0.0142 * j;
-        ctxH.fillStyle = "#FEFBFA";
-        ctxH.fill();
         ctxH.stroke();
 
     }  
