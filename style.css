@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700;900&family=Rubik:wght@400;500&display=swap');
 :root{
     --primary-color: #FEFBFA;
     --secondary-color: #454442;
     --border-color: #F5F1F0;
     --third-color: #FF793C;
+    --contrast-color: #3cc2ff;
 }
 
 body {
@@ -140,13 +141,13 @@ section {
 
   .hero-s {
     font-weight: 600;
-    color: var(--third-color);
+    color: var(--contrast-color);
   }
   
 
 
   .nav {
-    z-index: 997;
+    z-index: 1001;
     font-size: x-large;
     font-weight: bold;
     position: absolute;
@@ -202,7 +203,7 @@ section {
 
   .canvas {
     position: absolute;    
-    width: 100vw;
+    width: 100%;
     height: 100vh;
   }
 
@@ -234,82 +235,166 @@ section {
     transition-delay: 400ms;
   }
 
+
+  .project {
+    z-index: 1001;
+  }
   .photo-container {
-    width: 70vw;
     display: flex;
-    cursor: grab;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
+  @media (max-width: 480px) {
+    .photo-container {
+      display: block;
+    }
+  }
+
+
   .photo {
-    display: inline-block;
-    font-family: "Rubik", serif;
     text-align: center;
     height: 17.5rem;
     width: 12rem;
     margin: 1rem;
-    box-shadow: 0 0 3px 0.5px var(--secondary-color);
-    background-color: #ff905c;
-  }
-
-
-
-  .photo-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 3rem;
-    font-weight: 550;
-    font-size: large;
+    box-shadow: 1px 1px 3px 0.5px var(--secondary-color);
     background-color: whitesmoke;
   }
 
-  .photo-bot {
-    margin: 0.5rem;
-    font-weight: 500;
+  .photo-pic {
+    text-align: start;
+    transform: translateY(0.75rem);
+    margin: auto;
+    width: 11rem;
+    height: 14rem;
+    background-color: #ffc0a3;
+  }
+
+  .photo-title {
+    font-weight: 600;
+    font-size: xx-large;
+    color:aliceblue;
+    margin-left: 0.25rem;
+  }
+
+  .photo-skills {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: end;
+    font-size: large;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: aliceblue;
+    list-style-type: none;
+  }
+  
+  .photo-front-bot {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;  
+    display: flex;
+    flex-direction: row;
+  }
+
+  .photo-year {
+    font-weight: 600;
+    font-family: 'Kalam', cursive;
+    margin: 0.25rem;
+    font-size: large;
+  }
+
+  .photo-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+  }
+  .photo-arrow > img {
+    margin-right: 0.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .photo-back {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  /* Flip Card */
+
+  .flip-card {
+    margin: 1rem;
+    background-color: transparent;
+    width: 12rem;
+    height: 17.5rem;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    color: #F5F1F0;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  
+  /* Style the back side */
+  .flip-card-back {
+    text-align: start;
+    background-color: #ffc0a3;
+    color: #d84400;
+    transform: rotateY(-180deg);
   }
 
-  .photo-des {
-    width: 10rem;
-    height: 8rem;
+  .flip-card-back-des {
+    margin: 1rem;
+    font-weight: 550;
+    font-size: large;
   }
 
-  .photo-icons {
-    margin-top: none;
-    margin-bottom: 1rem;
-  }
-
-  .photo-icons > img{
-    width: 2rem;
-    height: 2rem;
-  }
-  .photo-links {
+  .flip-card-back-links {
+    position: absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    background-color: #F5F1F0;
   }
 
-  .photo-links a {
-    margin: 0.5rem;
-    border-radius: 5%;
-    padding: 0.5rem;
-    border: 2px solid whitesmoke;
+  .flip-card-back-links > a{
+    color: #d84400;
+    margin: 1rem;
+    font-size: large;
     text-decoration: none;
-    color: #F5F1F0;
-    opacity: 1;
-    transition: opacity 0.3s ;
+    transition: font-size 0.5s;
   }
 
-
-  .photo-links a:hover {
-    opacity: 0.5;
+  .flip-card-back-links > a:hover {
+    font-size: x-large;
   }
-
-
+  
   
 
   

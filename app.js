@@ -101,7 +101,7 @@ window.addEventListener('scroll', draw);
 function updateHeaderPosition() {
     const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
     let stickyScroll = currentScrollPos /10;
-    if (currentScrollPos <= 300) {
+    if (currentScrollPos <= 250) {
         scrollHero.style.transform = `translateY(${currentScrollPos}px)`;
         scrollNav.style.transform = `translateY(${currentScrollPos}px)`;
         let scrollOpc = 1-(currentScrollPos*0.00333);
@@ -111,7 +111,7 @@ function updateHeaderPosition() {
         canvas.style.transform = `translateY(${currentScrollPos*0.9}px)`;        
         //somebody once told me the world is gonna roll me I aint the sharpest tool in the sheded
     }
-    if (currentScrollPos >= 300) {
+    if (currentScrollPos >= 250) {
         scrollNav.style.opacity = 0;
         scrollHero.style.opacity = 0;
         scrollNav.style.position = "absolute";
