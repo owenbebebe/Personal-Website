@@ -75,7 +75,7 @@ function draw() {
         let moonY = 1;
         let moonX = 1;
         moonY = 1 + (0.03777 *scrollTop);
-        let moonR = 1/(1+Math.exp(-0.00333*scrollTop));
+        let moonR = 1/(1+Math.exp(0.00333 *scrollTop));
         ctxM.clearRect(0, 0, canvasM.width, canvasM.height);
         for(let i = 1; i <= 10; i++) {
             ctxM.beginPath();
