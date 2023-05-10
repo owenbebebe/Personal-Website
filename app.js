@@ -87,7 +87,6 @@ let scrollEnter = false;
 window.addEventListener('scroll', draw);
 function updateHeaderPosition() {
     const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-    console.log(currentScrollPos);
     let stickyScroll = currentScrollPos /10;
     if (currentScrollPos <= 300) {
         scrollHero.style.transform = `translateY(${currentScrollPos}px)`;
@@ -133,40 +132,32 @@ hiddenElement.forEach((el) => observer.observe(el));
 //scrolling hero page
 
 //drag card function
+const container = document.querySelector('.photo-container');
+let isDown = false;
+let startX;
+let scrollLeft;
 
-const photoCon = document.querySelector(".photo-container");
+container.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - container.offsetLeft;
+  scrollLeft = container.scrollLeft;
+  container.classList.add('active');
+});
 
-photoCon.Left = 150;
+container.addEventListener('mouseleave', () => {
+  isDown = false;
+  container.classList.remove('active');
+});
 
-let pos = { top: 0, left: 0, x: 0, y: 0 };
+container.addEventListener('mouseup', () => {
+  isDown = false;
+  container.classList.remove('active');
+});
 
-const mouseDownHandler = function (e) {
-    pos = {
-        // The current scroll
-        left: photoCon.scrollLeft,
-        top: photoCon.scrollTop,
-        // Get the current mouse position
-        x: e.clientX,
-        y: e.clientY,
-    };
-    photoCon.style.cursor = 'grabbing';
-    photoCon.style.userSelect = 'none';
-
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
-};
-
-const mouseMoveHandler = function (e) {
-    document.removeEventListener('mousemove', mouseMoveHandler);
-    document.removeEventListener('mouseup', mouseUpHandler);
-
-    ele.style.cursor = 'grab';
-    ele.style.removeProperty('user-select');
-    // How far the mouse has been moved
-    const dx = e.clientX - pos.x;
-    const dy = e.clientY - pos.y;
-
-    // Scroll the element
-    photoCon.scrollTop = pos.top - dy;
-    photoCon.scrollLeft = pos.left - dx;
-};
+container.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - container.offsetLeft;
+  const walk = (x - startX) * 3; // adjust the speed of scrolling here
+  container.scrollLeft = scrollLeft - walk;
+});

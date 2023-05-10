@@ -19,6 +19,8 @@ h1 {
   font-size: xx-large;
   font-weight: 700;
 }
+
+
 section {
     display: grid;
     place-items: center;
@@ -41,17 +43,19 @@ section {
 }
 
 .frame {
+    pointer-events: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 0;
     width: 95vw;
     height: 90vh;
     z-index: 1000;
 }
 
 .frame-line {
-    border: 2px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     animation: run 2s 1 linear;
 }
 
@@ -180,16 +184,17 @@ section {
 
   .nav-li {
     margin: 1rem 0;
-    transition: color 1s ease-in-out;
+    transition: opacity 0.5s;
   }
 
-  .nav-li a {
+  .nav-li > a {
     text-decoration: none;
     color: var(--secondary-color);
+    
   }
 
-  .nav-li:hover a {
-    color: var(--third-color);
+  .nav-li:hover {
+    opacity: 0.5 ;
   }
 
 
@@ -225,23 +230,26 @@ section {
   }
 
   .photo-container {
+    width: 70vw;
     display: flex;
     cursor: grab;
     overflow: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 
   .photo {
+    display: inline-block;
     font-family: "Rubik", serif;
     text-align: center;
-    flex: 1;
     height: 17.5rem;
     width: 12rem;
     margin: 1rem;
     box-shadow: 0 0 3px 0.5px var(--secondary-color);
-    background-color: #ff905c
-;
-    transition: opacity 1s linear;
+    background-color: #ff905c;
   }
+
+
 
   .photo-top {
     display: flex;
@@ -254,6 +262,44 @@ section {
     background-color: whitesmoke;
   }
 
+  .photo-bot {
+    margin: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: #F5F1F0;
+  }
+
+  .photo-icons {
+    margin-top: 4rem;
+  }
+
+  .photo-icons > img{
+    width: 2rem;
+    height: 2rem;
+  }
+  .photo-links {
+    transform: translateY(1.5rem);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .photo-links a {
+    margin: 0.5rem;
+    border-radius: 5%;
+    padding: 0.5rem;
+    border: 2px solid whitesmoke;
+    text-decoration: none;
+    color: #F5F1F0;
+    opacity: 1;
+    transition: opacity 0.3s ;
+  }
+
+
+  .photo-links a:hover {
+    opacity: 0.5;
+  }
+
 
   @media screen and (max-width: 768px) {
     .photo-container {
@@ -264,7 +310,7 @@ section {
       margin: 3rem auto;
     }
   }
-
+  
   
 
   
