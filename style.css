@@ -26,7 +26,6 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 100vh;
 }
 
 
@@ -235,6 +234,74 @@ section {
     transition-delay: 400ms;
   }
 
+  /* Skills Section */
+
+  .skills {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 999;
+  }
+
+  .skill-card-container {
+    display: flex;
+  }
+
+
+  .skill-card-outer {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14rem;
+    width: 14rem;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    background-color: whitesmoke;
+  }
+
+  @media (max-width: 780px) {
+
+    .skill-card-container {
+      display: block;
+    }
+  }
+
+  .skill-card-inner {
+    text-align: center;
+    height: 12.5rem;
+    width: 12.5rem;
+    background-color: #a3e2ff ;
+  }
+
+  .skill-title {
+    font-weight: 700;
+    height: 2rem;
+    font-size: x-large;
+  }
+
+  .skill-sets {
+    width: 100%;
+    height: 100%;
+    text-align: start;
+  }
+
+  .skill-li {
+    font-size: large;
+    font-weight: 600;
+    width: 100%;
+    margin: 0.5rem;
+    display: flex;
+  }
+
+  .skill-icon {
+    position: absolute;
+    transform: translateX(-1.5rem);
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: grayscale(30%);
+  }
 
   .project {
     z-index: 1001;
@@ -243,7 +310,7 @@ section {
     display: flex;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 780px) {
     .photo-container {
       display: block;
     }
@@ -394,6 +461,7 @@ section {
   .flip-card-back-links > a:hover {
     font-size: x-large;
   }
+
   
   
 
