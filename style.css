@@ -123,7 +123,7 @@ section {
   .header-container {
     max-width: 100%;
     width: 100vw ;
-    height: 150vh;
+    height: 140vh;
   }
 
   .hero {
@@ -179,7 +179,7 @@ section {
   @media (min-width: 1440px) {
     .nav {
         left: 85%;
-        top: 50%;
+        top: 60%;
         font-size: xx-large;
     }
   }
@@ -245,6 +245,7 @@ section {
   }
 
   .skill-card-container {
+    margin-top: 1rem;
     display: flex;
   }
 
@@ -260,10 +261,17 @@ section {
     background-color: whitesmoke;
   }
 
-  @media (max-width: 780px) {
-
+  @media (max-width: 480px) {
     .skill-card-container {
       display: block;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .skill-card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
   }
 
@@ -272,6 +280,17 @@ section {
     height: 12.5rem;
     width: 12.5rem;
     background-color: #a3e2ff ;
+  }
+
+  @media (min-width: 768px) and (max-width: 1280px) {
+    .skill-card-outer {
+      height: 12rem;
+      width: 12rem;
+    }
+    .skill-card-inner {
+      height: 11rem;
+      width: 11rem;
+    }
   }
 
   .skill-title {
@@ -310,10 +329,22 @@ section {
     display: flex;
   }
 
-  @media (max-width: 780px) {
+  @media (max-width: 480px) {
     .photo-container {
       display: block;
     }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .photo-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  .project {
+    margin-top: 2rem;
   }
 
 
@@ -462,7 +493,120 @@ section {
     font-size: x-large;
   }
 
-  
-  
+  /* Contact */
+
+  .contact {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .contact-container {
+    box-shadow: 2px 2px 3px 1px var(--secondary-color);
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 33rem;
+    height: 22.5rem;
+  }
+
+  .contact-container > button {
+    margin-top: 0.7rem;
+    background-color: whitesmoke;
+    border: none;
+    font-size: x-large;
+    font-family: 'Kalam', cursive;
+    transition: font-size 1s;
+  }
+
+  .contact-container > button:hover {
+    font-size: xx-large;
+  }
+
+  .contact-form {
+    color: #FEFBFA;
+    background-color: var(--secondary-color);
+    width: 30rem;
+    border: none;
+    padding: 1rem;
+  }
+
+  .contact-form::placeholder {
+    /* Set the color of the placeholder text */
+    color: #F5F1F0;
+  }
+
+  .contact-second {
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+  }
+
+  /* Ticker */
+
+.ticker {
+  width: 100%;
+  display: flex;
+}
+
+.ticker-rainbow {
+  position: absolute;
+  transform: translateY(0.5rem);
+  width: 100%;
+  height: 3.5rem;
+}
+
+#t-red {
+  width: 100%;
+  height: 0.7rem;
+  background-color: #FF2E2E;
+}
+
+#t-orange {
+  width: 100%;
+  height: 0.7rem;
+  background-color: #FFA500;
+}
+
+#t-yellow {
+  width: 100%;
+  height: 0.7rem;
+  background-color:  #ffd500;
+}
+
+#t-green {
+  width: 100%;
+  height: 0.7rem;
+  background-color:  #66cd00;
+}
+
+#t-blue {
+  width: 100%;
+  height: 0.7rem;
+  background-color:   #0080ff;
+}
+
+
+.ticker__list {
+  font-weight: 700;
+  font-size: x-large;
+  font-family: 'Kalam', cursive;
+  display: flex;
+  margin-top: 20px;
+  animation: ticker 25s infinite linear;
+}
 
   
+.ticker__item {
+  width: 15rem;
+  margin-right: 1rem;
+}
+  
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}

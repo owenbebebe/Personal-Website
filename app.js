@@ -69,7 +69,6 @@ function setSize() {
 
 function draw() {
     let scrollTop = window.scrollY || window.pageYOffset;
-    console.log(scrollTop);
     if(scrollTop <= 150) {
         canvasM.style.opacity = "1";
         let moonY = 1;
@@ -142,39 +141,26 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElement = document.querySelectorAll('.hidden'); 
 hiddenElement.forEach((el) => observer.observe(el));
 
-//scrolling hero page
+function sendEmail() {
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "liowency@gmail.com  ",
+        Password : "0078215C13329D28F8AE8DFDF0E81CDA2CF9",
+        To : 'liowency@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form From Personal Website",
+        Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("Message Sent Successfully! Thank You for Connecting!")
+    );
+    
+}
 
-//drag photos function
-// const photoContainer = document.querySelector('.photo-container');
-// const photos = document.querySelector('.photo');
+// ticker 
+var ticker = document.querySelector('.ticker')
+  , list = document.querySelector('.ticker__list')
+  , clone = list.cloneNode(true)
 
-
-
-// let isDown = false;
-// let startX;
-// let scrollLeft;
-
-// photoContainer.addEventListener('mousedown', (e) => {
-//   isDown = true;
-//   startX = e.pageX - photoContainer.offsetLeft;
-//   scrollLeft = photoContainer.scrollLeft;
-//   photoContainer.classList.add('active');
-// });
-
-// photoContainer.addEventListener('mouseleave', () => {
-//   isDown = false;
-//   photoContainer.classList.remove('active');
-// });
-
-// photoContainer.addEventListener('mouseup', () => {
-//   isDown = false;
-//   photoContainer.classList.remove('active');
-// });
-
-// photoContainer.addEventListener('mousemove', (e) => {
-//   if (!isDown) return;
-//   e.preventDefault();
-//   const x = e.pageX - photoContainer.offsetLeft;
-//   const walk = (x - startX) * 3; // adjust the speed of scrolling here
-//   photoContainer.scrollLeft = scrollLeft - walk;
-// });
+ticker.append(clone)

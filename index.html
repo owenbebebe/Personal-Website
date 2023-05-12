@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=!, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/logo.png">
     <script defer src="app.js"></script>
-    <title>Document</title>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <title>Owen Li</title>
   </head>
   <body>
     <div class="frame frame-border"></div>
@@ -305,9 +307,34 @@
       </div>
     </section>
     <!-- Contact Me -->
-    <section class="hidden">
-      <h2>Contact me to suck my dick</h2>
-      <p>Free BJ by 9 pm</p>
+    <section class="contact">
+      <div class="ticker-rainbow">
+        <div id="t-red"></div>
+        <div id="t-orange"></div>
+        <div id="t-yellow"></div>
+        <div id="t-green"></div>
+        <div id="t-blue"></div>
+      </div>
+      <div class="ticker">
+        <div class="ticker__list">
+          <div class="ticker__item">CONTACT ME</div>
+          <div class="ticker__item">聯絡我</div>
+          <div class="ticker__item">ご連絡</div>
+          <div class="ticker__item">CONTACT ME</div>
+          <div class="ticker__item">聯絡我</div>
+          <div class="ticker__item">ご連絡</div>
+          <div class="ticker__item">CONTACT ME</div>
+          <div class="ticker__item">聯絡我</div>
+        </div>
+      </div>
+      <div class="hidden contact-second">
+        <form  class="contact-container" onsubmit="sendEmail(); reset(); return false;">
+          <input type="text" class="contact-form" id="name" placeholder="Your Name" required>
+          <input type="email" class="contact-form" id="email" placeholder="Email" required>
+          <textarea type="message" rows = "10" class="contact-form" id="message" placeholder="Let's connect !"></textarea>
+          <button type="submit">SEND</button>
+        </form>
+      </div>
     </section>
   </body>
   </script>
