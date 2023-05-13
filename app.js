@@ -147,9 +147,7 @@ hiddenElement.forEach((el) => observer.observe(el));
 
 function sendEmail() {
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "liowency@gmail.com  ",
-        Password : "0078215C13329D28F8AE8DFDF0E81CDA2CF9",
+        SecureToken : "c45f8b49-065a-42b8-84d1-ec701714ea08",
         To : 'liowency@gmail.com',
         From : 'liowency@gmail.com',
         Subject : "New Contact Form From Personal Website",
