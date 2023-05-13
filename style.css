@@ -177,6 +177,7 @@ section {
     left: 60%;
     top: 57.5%;
   }
+
   
   @media (min-width: 480px) and (max-width: 767px) {
     .nav {
@@ -386,6 +387,14 @@ section {
     }
   }
 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .photo-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
   .project {
     margin-top: 2rem;
   }
@@ -575,6 +584,7 @@ section {
     background-color: whitesmoke;
     border: none;
     font-size: 1.5rem;
+    color: black;
     font-family: 'Kalam', cursive;
     transition: font-size 1s;
   }
@@ -647,34 +657,29 @@ section {
   height: 3.5rem;
 }
 
-#t-red {
+.ticker-tag {
   width: 100%;
   height: 0.7rem;
+}
+
+#t-red {
   background-color: #FF2E2E;
 }
 
 #t-orange {
-  width: 100%;
-  height: 0.7rem;
   background-color: #FFA500;
 }
 
 #t-yellow {
-  width: 100%;
-  height: 0.7rem;
   background-color:  #ffd500;
 }
 
 #t-green {
-  width: 100%;
-  height: 0.7rem;
   background-color:  #66cd00;
 }
 
 #t-blue {
-  width: 100%;
-  height: 0.7rem;
-  background-color:   #0080ff;
+  background-color:  #0080ff;
 }
 
 
@@ -698,3 +703,38 @@ section {
     transform: translateX(-100%);
   }
 }
+
+.back-top {
+  opacity: 0;
+  bottom: 2.5vh;
+  position: fixed;
+  z-index: 1001;
+  transition: opacity 1s;
+}
+
+.back-top > a > img{
+  transform: rotate(-90deg);
+  width: 3rem;
+  height: 4rem;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .back-top {
+      left: 2vw;
+  }
+}
+
+/* For desktops and larger devices */
+@media (min-width: 1024px) {
+  .back-top {
+    left: 1.5vw;
+}
+}
+
+@media (min-width: 1440px) {
+  .back-top {
+    left: 2vw;
+}
+}
+
+

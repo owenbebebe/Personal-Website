@@ -96,6 +96,8 @@ function draw() {
 let scrollNav = document .querySelector(".nav");
 let scrollHero = document.querySelector(".hero");
 let scrollEnter = false; 
+let backTop = document.querySelector(".back-top");
+
 window.addEventListener('scroll', draw);
 function updateHeaderPosition() {
     const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
@@ -107,7 +109,8 @@ function updateHeaderPosition() {
         scrollNav.style.opacity = scrollOpc;
         scrollHero.style.opacity = scrollOpc;
         canvasH.style.transform = `translateY(${currentScrollPos*0.667}px)`;
-        canvas.style.transform = `translateY(${currentScrollPos*0.9}px)`;        
+        canvas.style.transform = `translateY(${currentScrollPos*0.9}px)`;
+        backTop.style.opacity = '0';        
         //somebody once told me the world is gonna roll me I aint the sharpest tool in the sheded
     }
     if (currentScrollPos >= 250) {
@@ -116,6 +119,7 @@ function updateHeaderPosition() {
         scrollNav.style.position = "absolute";
         scrollHero.style.position = "absolute";
         canvas.style.position = "absolute";
+        backTop.style.opacity = '1';    
     }
   }
 
