@@ -15,7 +15,7 @@
     <div class="frame frame-line"></div>
     <!-- Header -->
     <div class="header-container">
-      <section class="header">
+      <section class="header" id="home">
         <canvas class="canvas canvas-moon"></canvas>
         <canvas class="canvas canvas-low"></canvas>
         <canvas class="canvas canvas-high"></canvas>
@@ -34,43 +34,45 @@
         </div>
         <nav class="nav">
           <ul>
-            <li class="nav-li"><a href="#">Home</a></li>
-            <li class="nav-li"><a href="#">Portfolio</a></li>
-            <li class="nav-li"><a href="#">Contact</a></li>
-            <li class="nav-li"><a href="#">Resume</a></li>
+            <li class="nav-li"><a href="#home">Home</a></li>
+            <li class="nav-li"><a href="#portfolio">Portfolio</a></li>
+            <li class="nav-li"><a href="#contact">Contact</a></li>
+            <li class="nav-li"><a href="Cheng yu Li_resume.pdf" download="">Resume</a></li>
           </ul>
         </nav>
       </section>
     </div>
     <!-- skills -->
-    <section class="skills hidden">
+    <section class="skills hidden" id="portfolio">
       <h2>Skills</h2>
       <div class="slide skill-card-container">
         <!-- BASICS -->
-        <div class="slide hidden skill-card-outer">
-          <div class="skill-card-inner">
-            <div class="skill-title">
-              BASICS
-            </div>
-            <div class="skill-sets">
-              <ul>
-                <div class="skill-li">
-                  <li>HTML</li>
-                  <img class="skill-icon" src="images/html.png" alt="">
-                </div>
-                <div class="skill-li">
-                  <li>CSS</li>
-                  <img class="skill-icon" src="images/css.png" alt="">
-                </div>
-                <div class="skill-li">
-                  <li>Javascript</li>
-                  <img class="skill-icon" src="images/js.png" alt="">
-                </div>
-                <div class="skill-li">
-                  <li>C++</li>
-                  <img class="skill-icon" src="images/c++.png" alt="">
-                </div>
-              </ul>
+        <div class="skill-card-clipandcard">
+          <div class="slide hidden skill-card-outer">
+            <div class="skill-card-inner">
+              <div class="skill-title">
+                Basics
+              </div>
+              <div class="skill-sets">
+                <ul>
+                  <div class="skill-li">
+                    <li>HTML</li>
+                    <img class="skill-icon" src="images/html.png" alt="">
+                  </div>
+                  <div class="skill-li">
+                    <li>CSS</li>
+                    <img class="skill-icon" src="images/css.png" alt="">
+                  </div>
+                  <div class="skill-li">
+                    <li>Javascript</li>
+                    <img class="skill-icon" src="images/js.png" alt="">
+                  </div>
+                  <div class="skill-li">
+                    <li>C++</li>
+                    <img class="skill-icon" src="images/c++.png" alt="">
+                  </div>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -78,7 +80,7 @@
         <div class="slide hidden skill-card-outer">
           <div class="skill-card-inner">
             <div class="skill-title">
-              FRAMEWORK
+              Framework
             </div>
             <div class="skill-sets">
               <ul>
@@ -102,7 +104,7 @@
         <div class="slide hidden skill-card-outer">
           <div class="skill-card-inner">
             <div class="skill-title">
-              DESIGN 
+              Design
             </div>
             <div class="skill-sets">
               <ul>
@@ -126,7 +128,7 @@
         <div class="slide hidden skill-card-outer">
           <div class="skill-card-inner">
             <div class="skill-title">
-              BACKEND
+              Backend
             </div>
             <div class="skill-sets">
               <ul>
@@ -154,7 +156,7 @@
         <div class="slide hidden skill-card-outer">
           <div class="skill-card-inner">
             <div class="skill-title">
-              EXTRA
+              Extra
             </div>
             <div class="skill-sets">
               <ul>
@@ -208,8 +210,8 @@
               <div class="flip-card-back-container">
                 <div class="flip-card-back-des">Created logical agent based AI game in vanilla js</div>
                 <div class="flip-card-back-links">
-                  <a href="#">Website</a>
-                  <a href="#">Code</a>
+                  <a href="https://owenbebebe.github.io/wumpusworld.github.io/" target="_blank">Website</a>
+                  <a href="https://github.com/owenbebebe/wumpusworld.github.io" target="_blank">Code</a>
                 </div>
               </div>
             </div>
@@ -239,8 +241,8 @@
               <div class="flip-card-back-container">
                 <div class="flip-card-back-des">Developed an AI that runs min-max algorithmn to beat the player in vanilla js</div>
                 <div class="flip-card-back-links">
-                  <a href="#">Website</a>
-                  <a href="#">Code</a>
+                  <a href="https://owenbebebe.github.io/Othello/" target="_blank">Website</a>
+                  <a href="https://github.com/owenbebebe/Othello" target="_blank">Code</a>
                 </div>
               </div>
             </div>
@@ -269,7 +271,7 @@
               <div class="flip-card-back-container">
                 <div class="flip-card-back-des">Created an intelligent animal guessing game using a tree data structure. Learns from mistakes and saves databases.</div>
                 <div class="flip-card-back-links">
-                  <a href="#">Code</a>
+                  <a href="https://github.com/owenbebebe/AI---The-Game-of-Animal" target="_blank">Code</a>
                 </div>
               </div>
             </div>
@@ -298,7 +300,7 @@
               <div class="flip-card-back-container">
                 <div class="flip-card-back-des">This project takes the music.csv data and predict a user's music preferece based on their age and gender.</div>
                 <div class="flip-card-back-links">
-                  <a href="#">Code</a>
+                  <a href="https://github.com/owenbebebe/Predicting-music-preference-and-visualization" target="_blank">Code</a>
                 </div>
               </div>
             </div>
@@ -307,7 +309,7 @@
       </div>
     </section>
     <!-- Contact Me -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="ticker-rainbow">
         <div id="t-red"></div>
         <div id="t-orange"></div>
@@ -332,7 +334,19 @@
           <input type="text" class="contact-form" id="name" placeholder="Your Name" required>
           <input type="email" class="contact-form" id="email" placeholder="Email" required>
           <textarea type="message" rows = "10" class="contact-form" id="message" placeholder="Let's connect !"></textarea>
-          <button type="submit">SEND</button>
+          <div class="send-container">
+            <div class="submit-container">
+              <button type="submit">SEND</button>
+            </div>
+            <div class="frame-icon-container">
+              <div class="frame-icon">
+                <a href="https://www.linkedin.com/in/owen-li-bb2730224/" target="_blank"><img src="images/linkedin.png" alt="Linkedin.png"></a>
+              </div>
+              <div class="frame-icon">
+                <a href="https://github.com/owenbebebe/Portfolio-Owen-Li" target="_blank"><img src="images/github.png" alt="Github.png"></a>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </section>

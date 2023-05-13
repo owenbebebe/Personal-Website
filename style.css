@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-  font-size: xxx-large;
+  font-size: 3rem;
   font-weight: 550;
 }
 
@@ -52,6 +52,30 @@ section {
     width: 95vw;
     height: 90vh;
     z-index: 1000;
+}
+
+
+.frame-icon-container {
+  width:50%;
+  transform: translateX(-0.75rem);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.frame-icon > a > img{
+  width: 5vh;
+  height: 5vh;
+  transition: all 0.5s;
+}
+
+.frame-icon > a > img:hover {
+  width: 7vh;
+  height: 7vh;
+}
+
+.frame-icon {
+  margin-left: 0.5rem;
 }
 
 .frame-line {
@@ -134,7 +158,7 @@ section {
   }
 
   .hero-p {
-    font-size:large;
+    font-size:1.15rem;
     width: 33vw;
 }
 
@@ -146,8 +170,8 @@ section {
 
 
   .nav {
-    z-index: 1001;
-    font-size: x-large;
+    z-index: 999;
+    font-size: 1.5rem;
     font-weight: bold;
     position: absolute;
     left: 60%;
@@ -156,7 +180,7 @@ section {
   
   @media (min-width: 480px) and (max-width: 767px) {
     .nav {
-      left: 65%;
+      left: 70%;
     }
   }
   
@@ -171,16 +195,17 @@ section {
   /* For desktops and larger devices */
   @media (min-width: 1024px) {
     .nav {
-        left: 80%;
+        left: 82%;
         top: 55%;
+        font-size: 1.6rem;
     }
   }
 
   @media (min-width: 1440px) {
     .nav {
-        left: 85%;
+        left: 90%;
         top: 60%;
-        font-size: xx-large;
+        font-size: 1.7rem;
     }
   }
 
@@ -249,6 +274,24 @@ section {
     display: flex;
   }
 
+  .skill-card-clipandcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card-clip {
+    position: absolute;
+    z-index: 1000;
+  }
+
+
+  .skill-card-clip > img {
+    transform: translateY(-2.15rem);
+    width: 1rem;
+    height: 2.5rem;
+  }
+
 
   .skill-card-outer {
     color: aliceblue;
@@ -296,7 +339,7 @@ section {
   .skill-title {
     font-weight: 700;
     height: 2rem;
-    font-size: x-large;
+    font-size: 1.4rem;
   }
 
   .skill-sets {
@@ -306,7 +349,7 @@ section {
   }
 
   .skill-li {
-    font-size: large;
+    font-size: 1.1rem;
     font-weight: 600;
     width: 100%;
     margin: 0.5rem;
@@ -368,7 +411,7 @@ section {
 
   .photo-title {
     font-weight: 600;
-    font-size: xx-large;
+    font-size: 2rem;
     color:aliceblue;
     margin-left: 0.25rem;
   }
@@ -378,7 +421,7 @@ section {
     bottom: 0;
     right: 0;
     text-align: end;
-    font-size: large;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-right: 0.5rem;
     color: aliceblue;
@@ -398,7 +441,7 @@ section {
     font-weight: 600;
     font-family: 'Kalam', cursive;
     margin: 0.25rem;
-    font-size: large;
+    font-size: 1.1rem;
   }
 
   .photo-arrow {
@@ -466,7 +509,7 @@ section {
   .flip-card-back-des {
     margin: 1rem;
     font-weight: 550;
-    font-size: large;
+    font-size: 1.1rem;
   }
 
   .flip-card-back-links {
@@ -484,13 +527,13 @@ section {
   .flip-card-back-links > a{
     color: #d84400;
     margin: 1rem;
-    font-size: large;
+    font-size: 1.1rem;
     text-decoration: none;
     transition: font-size 0.5s;
   }
 
   .flip-card-back-links > a:hover {
-    font-size: x-large;
+    font-size: 1.3rem;
   }
 
   /* Contact */
@@ -510,29 +553,74 @@ section {
     align-items: center;
     flex-direction: column;
     display: flex;
-    width: 33rem;
-    height: 22.5rem;
+    width: 60vw;
+    height: 60vh;
   }
 
-  .contact-container > button {
+  .send-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .submit-container {
+    width: 65%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .submit-container > button {
     margin-top: 0.7rem;
     background-color: whitesmoke;
     border: none;
-    font-size: x-large;
+    font-size: 1.5rem;
     font-family: 'Kalam', cursive;
     transition: font-size 1s;
   }
 
-  .contact-container > button:hover {
-    font-size: xx-large;
+  .submit-container > button:hover {
+    font-size: 2rem;
   }
 
   .contact-form {
     color: #FEFBFA;
     background-color: var(--secondary-color);
-    width: 30rem;
     border: none;
     padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .contact-container {
+      width: 20rem;
+      height: 14rem;
+    }
+
+    .contact-form {
+      width: 18rem;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .contact-container {
+      width: 25rem;
+      height: 17.025rem;
+    }
+
+    .contact-form {
+      width: 22.725rem;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .contact-container {
+      width: 33rem;
+      height: 22.5rem;
+    }
+
+    .contact-form {
+      width: 30rem;
+    }
   }
 
   .contact-form::placeholder {
@@ -592,7 +680,7 @@ section {
 
 .ticker__list {
   font-weight: 700;
-  font-size: x-large;
+  font-size: 1.4rem;
   font-family: 'Kalam', cursive;
   display: flex;
   margin-top: 20px;

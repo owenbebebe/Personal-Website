@@ -147,7 +147,7 @@ function sendEmail() {
         Username : "liowency@gmail.com  ",
         Password : "0078215C13329D28F8AE8DFDF0E81CDA2CF9",
         To : 'liowency@gmail.com',
-        From : document.getElementById("email").value,
+        From : 'liowency@gmail.com',
         Subject : "New Contact Form From Personal Website",
         Body : "Name: " + document.getElementById("name").value
         + "<br> Email: " + document.getElementById("email").value
@@ -164,3 +164,14 @@ var ticker = document.querySelector('.ticker')
   , clone = list.cloneNode(true)
 
 ticker.append(clone)
+
+//smooth scrolling effect
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior : "smooth"
+        });
+    });
+});
