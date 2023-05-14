@@ -40,6 +40,7 @@ section {
 
 
 .hidden {
+    background-color: transparent;
     opacity: 0;
     filter: blur(10px);
     transform: translateX(-100%);
@@ -261,6 +262,7 @@ section {
   }
 
   .slides {
+    background-color: transparent;
     display: flex;
   }
 
@@ -517,7 +519,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility:hidden; /* Safari */
+    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
   
