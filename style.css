@@ -386,7 +386,6 @@ section {
   }
   .photo-container {
     background-color: transparent;
-    display: flex;
   }
 
   @media (max-width: 480px) {
@@ -420,9 +419,8 @@ section {
     text-align: center;
     height: 17.5rem;
     width: 12rem;
-    margin: 1rem;
-    box-shadow: 1px 1px 3px 0.5px var(--secondary-color);
-    background-color: whitesmoke;
+    margin: 1rem auto;
+    background-color: transparent;
   }
 
   .photo-pic {
@@ -520,11 +518,17 @@ section {
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
+
+  .flip-card-front {
+    box-shadow: 1px 1px 3px 0.5px var(--secondary-color);
+    background-color: whitesmoke;
+  }
   
   /* Style the front side (fallback if image is missing) */
   
   /* Style the back side */
   .flip-card-back {
+    box-shadow: 1px 1px 3px 0.5px var(--secondary-color);
     text-align: start;
     background-color: #ffc0a3;
     color: #d84400;
