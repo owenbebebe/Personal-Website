@@ -510,8 +510,8 @@ section {
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
   
   /* Position the front and back side */
@@ -530,8 +530,8 @@ section {
     text-align: start;
     background-color: #ffc0a3;
     color: #d84400;
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .flip-card-back-des {
