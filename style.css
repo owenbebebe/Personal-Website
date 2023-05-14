@@ -490,6 +490,7 @@ section {
     background-color: transparent;
     width: 12rem;
     height: 17.5rem;
+    -webkit-perspective: 1000px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -500,7 +501,7 @@ section {
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
-    -webkit-transition: transform 0.8s;
+    -webkit-transition: -webkit-transform 0.8s;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
