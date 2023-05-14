@@ -465,6 +465,7 @@ section {
     font-family: 'Kalam', cursive;
     margin: 0.25rem;
     font-size: 1.1rem;
+    background-color: transparent;
   }
 
   .photo-arrow {
@@ -555,6 +556,7 @@ section {
   }
 
   .flip-card-back-links > a{
+    width: 4rem;
     color: #d84400;
     margin: 1rem;
     font-size: 1.1rem;
