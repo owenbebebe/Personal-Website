@@ -381,9 +381,11 @@ section {
   }
 
   .project {
+    background-color: transparent;
     z-index: 1001;
   }
   .photo-container {
+    background-color: transparent;
     display: flex;
   }
 
@@ -480,10 +482,6 @@ section {
     height: 2.5rem;
   }
 
-  .photo-back {
-    position: absolute;
-    backface-visibility: hidden;
-  }
 
   /* Flip Card */
 
