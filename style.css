@@ -490,11 +490,14 @@ section {
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
+    -webkit-transition: transform 0.8s;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
   }
   
@@ -503,7 +506,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility:visible; /* Safari */
+    -webkit-backface-visibility:hidden; /* Safari */
     backface-visibility: hidden;
   }
   
@@ -514,6 +517,7 @@ section {
     text-align: start;
     background-color: #ffc0a3;
     color: #d84400;
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
   }
 
@@ -540,6 +544,7 @@ section {
     margin: 1rem;
     font-size: 1.1rem;
     text-decoration: none;
+    -webkit-transition: font-size 0.5s;
     transition: font-size 0.5s;
   }
 
