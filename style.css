@@ -556,6 +556,10 @@ section {
   }
 
   .flip-card-back-links > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
     width: 4rem;
     color: #d84400;
     margin: 1rem;
